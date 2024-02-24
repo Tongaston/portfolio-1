@@ -1,0 +1,22 @@
+:root {
+    --background-color: #171810;
+    --color-text: #D9D9D9;
+    --text-green: #03FA6E;
+    --border-color: #2A446B;
+    --font-ubuntu-mono: "Ubuntu Mono", monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: var(--font-ubuntu-mono);
+}
+
+body {
+    background: var(--background-color);
+    color: var(--color-text);
+    overflow: hidden;
+    overflow-y: scroll;
+}
