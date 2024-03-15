@@ -25,13 +25,15 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     font-size: 1.2rem;
-}
 
-.desktopMenuListItem:hover {
+    &:hover {
     color: var(--text-green);
     padding-bottom: 0.5rem;
     border-bottom: 3px solid var(--text-green);
 }
+}
+
+
 
 .desktopMenuBtn {
     background-color: var(--border-color);
@@ -53,8 +55,63 @@
     height: 1.2rem;
 } 
 
+.active {
+    color: var(--text-green);
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--text-green);
+}
+
+.burguerLogo {
+    display: none;
+    object-fit: cover;
+    width: 2.5rem;
+    color: var(--text-green);
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.mobileMenu {
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    height: fit-content;
+    min-width: 15rem;
+    background: rgb(50, 50, 50);
+    border-radius: 1rem;
+}
+
+.mobileMenuListItem {
+    padding: 0.5rem 3rem;
+    margin: 0.25rem;
+    background-color: var(--background-color);
+    border-radius: 0.5rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
 
 /* media querys */
+
+@media screen and (max-width: 720px) {
+    .burguerLogo {
+        display: flex;
+    }
+
+    .desktopMenu {
+        display: none;
+    }
+
+    .desktopMenuBtn {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 480px) {
     .desktopMenuBtn {
@@ -64,6 +121,5 @@
     .desktopMenuIcon {
         height: 1rem;
     } 
-  
 }
 
