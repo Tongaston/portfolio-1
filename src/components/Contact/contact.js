@@ -1,25 +1,52 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './contact.css';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_661yaex', 'template_sgins5e', form.current, {
+        publicKey: 'IqQfS1kYT8-YC503w',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          e.target.reset()
+          alert('Email Sent !')
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        }
+      );
+  };
+
   return (
     <section id='contactSection'>
       <h2 className='contactTitle'>Contact Me</h2>
       <p className='contactPara'>
         Please fill out the form below to discuss any work opportunies.
       </p>
-      <form className='contactForm'>
-        <input
+      <form ref={form} onSubmit={sendEmail} className='contactForm'>
+        <input name='user_name'
           type='text'
           className='contactInput'
           placeholder='Your name'
         ></input>
-        <input
+        <input name='user_email'
           type='email'
           className='contactInput'
           placeholder='Your Email'
         ></input>
-        <textarea className='textArea' name='message' rows='7' placeholder='Your message'></textarea>
+        <textarea
+          className='textArea'
+          name='message'
+          rows='7'
+          placeholder='Your message'
+        ></textarea>
         <button className='contactBtn'>Submit</button>
       </form>
       <footer className='contactFooter'>
