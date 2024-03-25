@@ -17,6 +17,7 @@
   height: 100vh; 
   max-height: 85vh;
   border-radius: 35%;
+  mask-image: linear-gradient(black 70%, transparent);
 }
 
 .introContent {

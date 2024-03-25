@@ -14,11 +14,18 @@ const Intro = () => {
           I'm <span className='introName'>Gastón</span> <br /> Web Developer
         </h1>
         <p className='introPara'>
-          I'm a new web developer, I specialize in developing <br />responsive and
-          search engine friendly websites.
+          I'm a new web developer, I specialize in developing <br />
+          responsive and search engine friendly websites.
         </p>
         <Link>
-          <button className='introBtn'>
+          <button
+            className='introBtn'
+            onClick={() => {
+              document
+                .getElementById('contactSection')
+                .scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
             <img className='introBtnIcon' src={iconHire} alt='briefcase icon' />
             Hire Me
           </button>
