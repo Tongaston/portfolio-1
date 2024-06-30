@@ -1,3 +1,12 @@
+:root {
+    --light-0: #f8f9fa;
+    --light-1: #e9ecef;
+    --light-2: #dee2e6;
+    --dark-0: #495057;
+    --dark-1: #343a40;
+    --dark-2: #212529;
+  }
+ 
  .navbar {
     height: 5rem;
     width: 100vw;
@@ -33,7 +42,27 @@
 }
 }
 
+input {
+    position: absolute;
+  }
+  
+  label {
+    background: var(--dark-0);
+    border-radius: 20px;
+    cursor: pointer;
+    height: 18px;
+    position: relative;
+    width: 38px;
+  }
 
+  label .sun-moon {
+    background: var(--dark-1);
+    border-radius: 50%;
+    height: 10px;
+    margin: 4px;
+    transition: transform 0.3s ease;
+    width: 10px;
+  }
 
 .desktopMenuBtn {
     background-color: var(--border-color);
