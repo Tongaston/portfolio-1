@@ -66,10 +66,6 @@ const Navbar = () => {
           Technologies
         </Link>
       </div>
-      <input id="toggle-button" type="checkbox"></input>
-      <label for="toggle-button">
-        <div class="sun-moon"></div>
-      </label>
 
       <button
         className="desktopMenuBtn"
