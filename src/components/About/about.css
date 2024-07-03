@@ -63,7 +63,7 @@
 
 @media screen and (max-width: 400px){
     #about {
-        margin-top: 30px;
+        position: static;
     }
     .aboutTitle {
         font-size: 3rem;
