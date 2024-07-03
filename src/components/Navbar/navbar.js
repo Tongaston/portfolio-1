@@ -167,8 +167,6 @@ const Navbar = () => {
         >
           Contact
         </Link>
-
-        <DarkMode />
       </div>
     </nav>
   )
