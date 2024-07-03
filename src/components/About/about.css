@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 50px auto;
+    margin: 0 auto;
 }
 
 .aboutTitle {
@@ -65,7 +65,7 @@
     .aboutTitle {
         font-size: 3rem;
         margin-bottom: 0.8rem;
-        margin-top: 2rem;
+        margin-top: 5rem;
         /* padding-top: 2rem; */
     }
     
