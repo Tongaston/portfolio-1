@@ -1,12 +1,12 @@
 #about {
     overflow: hidden;
     width: 100vw;
-    height: calc(100vh - 5rem);
+    height: 100vh;
     max-width: 65rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .aboutTitle {
