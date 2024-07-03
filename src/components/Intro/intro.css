@@ -21,7 +21,7 @@
 }
 
 .introContent {
-  height: 100vh;
+  height: calc(100vh - 5rem);
   width: 100vw;
   max-width: 80rem;
   padding: 2rem;
