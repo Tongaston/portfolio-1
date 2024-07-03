@@ -65,7 +65,8 @@
     .aboutTitle {
         font-size: 3rem;
         margin-bottom: 0.8rem;
-        padding-top: 2rem;
+        margin-top: 2rem;
+        /* padding-top: 2rem; */
     }
     
     .aboutDesc {
