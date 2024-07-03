@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './navbar.css'
+import DarkMode from '../DarkMode/DarkMode'
 
 import { Link } from 'react-scroll'
 
@@ -66,6 +67,8 @@ const Navbar = () => {
           Technologies
         </Link>
       </div>
+
+      <DarkMode />
 
       <button
         className="desktopMenuBtn"
@@ -164,6 +167,8 @@ const Navbar = () => {
         >
           Contact
         </Link>
+
+        <DarkMode />
       </div>
     </nav>
   )

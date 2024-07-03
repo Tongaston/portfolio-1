@@ -46,6 +46,7 @@
 }
 
 .introPara {
+    color: var(--text-para-color);
     font-size: 1.5rem;
     font-weight: 100;
     margin: 20px 0; 
@@ -53,7 +54,7 @@
 
 .introBtn {
     background-color: var(--border-color);
-    color: aliceblue;
+    color: var(--button-color-text);
     display: flex;
     align-items: center;
     gap: 10px;

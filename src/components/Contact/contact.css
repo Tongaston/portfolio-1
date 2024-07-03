@@ -43,7 +43,6 @@
   font-size: 14px;
   background-color: rgb(50, 50, 50);
   color: antiquewhite;
-  /* margin: 0 2rem; */
   outline: none;
 }
 
@@ -57,10 +56,9 @@
   cursor: pointer;
   font-size: 1.2rem;
   font-weight: bold;
-  transition: all 0.5 ease-in-out;
 
   &:hover {
-    box-shadow: 3px 3px 15px #ffffff;
+    box-shadow: 3px 3px 15px var(--hover-button-submit-color);
   }
 }
 
@@ -76,12 +74,11 @@
 
 .logoFooter {
   width: 2rem;
-  color: antiquewhite;
-  transition: all 0.3s ease-in-out;
+  color: var(--iconos-footer-color);
   opacity: 0.8;
 
   &:hover {
-    color: #03fa6e;
+    color: var(--hover-iconos-footer-color);
     opacity: 1;
   }
 }

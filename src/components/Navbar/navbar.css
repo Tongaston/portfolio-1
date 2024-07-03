@@ -10,7 +10,7 @@
     position: sticky;
     top: 0;
     z-index: 3;
-    background: #171810de;
+    background: var(navbar-background);
     backdrop-filter: blur(10px);
 }
 
@@ -35,7 +35,7 @@
 
 .desktopMenuBtn {
     background-color: var(--border-color);
-    color: aliceblue;
+    color: var(--button-color-text);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -80,7 +80,7 @@
     padding: 0.5rem;
     height: fit-content;
     min-width: 15rem;
-    background: rgb(50, 50, 50);
+    background: var(--mobile-menu-background);
     border-radius: 1rem;
 }
 

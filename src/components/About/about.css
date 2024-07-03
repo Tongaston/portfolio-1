@@ -26,7 +26,6 @@
 }
 
 .aboutBars {
-    /* background-color: rgba(0, 0, 0, 0.5); */
     padding: 1rem;
     width: 100vw;
     max-width: 80%;
@@ -35,11 +34,9 @@
 }
 
 .aboutBar {
-    /* height: 7rem; */
     display: flex;
     align-items: center;
-    /* background-color: #171810; */
-    background-color: rgb(50, 50, 50);
+    background-color: var(--about-bars-color);
     margin: 0.7rem;
     border-radius: 0.5rem;
 }
