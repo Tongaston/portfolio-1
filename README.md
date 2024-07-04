@@ -13,45 +13,19 @@ Bienvenido a la documentación de mi portafolio de desarrollador web. Este proye
 
 ### Tecnologías Utilizadas
 
-- React: Biblioteca principal para construir la interfaz de usuario.
-- React Router: Para la navegación entre diferentes secciones.
- -CSS Modules: Para el estilo de los componentes.
-- EmailJS: Para el manejo del formulario de contacto.
-- Webpack: Para la configuración del entorno de desarrollo y producción.
-- Estructura del Proyecto
+- **React:** Biblioteca principal para construir la interfaz de usuario.
+- **React Router:** Para la navegación entre diferentes secciones.
+- **CSS Modules:** Para el estilo de los componentes.
+- **EmailJS:** Para el manejo del formulario de contacto.
+- **Webpack:** Para la configuración del entorno de desarrollo y producción.
 
-### La estructura del proyecto es la siguiente:
+### Estructura del Proyecto
 
-css
-Copiar código
-my-portfolio/
-│
-├── public/
-│   ├── index.html
-│   └── ...
-│
-├── src/
-│   ├── assets/
-│   │   └── images/
-│   │       └── ...
-│   │
-│   ├── components/
-│   │   ├── Header/
-│   │   ├── Footer/
-│   │   ├── About/
-│   │   ├── Projects/
-│   │   ├── Skills/
-│   │   ├── Experience/
-│   │   └── Contact/
-│   │
-│   ├── App.js
-│   ├── index.js
-│   ├── App.css
-│   └── ...
-│
-├── package.json
-└── README.md
-Instalación
+La estructura del proyecto es la siguiente:
+
+<img width="707" alt="Captura de pantalla 2024-07-04 a las 18 37 29" src="https://github.com/Tongaston/portfolio-1/assets/133245840/97974a73-2593-4acc-9fd2-55bc39a1c4ff">
+
+### Instalación
 Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 
 Clona el repositorio:
