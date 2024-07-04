@@ -1,39 +1,105 @@
-# Getting Started with Create React App
+ # Documentación del Portafolio de Desarrollador Web
+ 
+### Introducción
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bienvenido a la documentación de mi portafolio de desarrollador web. Este proyecto está construido con React y tiene como objetivo mostrar mis habilidades, proyectos y experiencia como desarrollador web. Aquí encontrarás información sobre la instalación, estructura del proyecto, tecnologías utilizadas, y cómo contribuir.
 
-## Available Scripts
+### Características
 
-In the project directory, you can run:
+- **Responsive Design:** Adaptable a diferentes tamaños de pantalla.
+- **SPA (Single Page Application):** Navegación rápida y sin recargas.
+- **Secciones:** Home, About, Portfolio, Technologies y Contacto.
+- **Formulario de contacto:** Funcionalidad para enviar mensajes.
 
-### `npm start`
+### Tecnologías Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React: Biblioteca principal para construir la interfaz de usuario.
+- React Router: Para la navegación entre diferentes secciones.
+ -CSS Modules: Para el estilo de los componentes.
+- EmailJS: Para el manejo del formulario de contacto.
+- Webpack: Para la configuración del entorno de desarrollo y producción.
+- Estructura del Proyecto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### La estructura del proyecto es la siguiente:
 
-### `npm test`
+css
+Copiar código
+my-portfolio/
+│
+├── public/
+│   ├── index.html
+│   └── ...
+│
+├── src/
+│   ├── assets/
+│   │   └── images/
+│   │       └── ...
+│   │
+│   ├── components/
+│   │   ├── Header/
+│   │   ├── Footer/
+│   │   ├── About/
+│   │   ├── Projects/
+│   │   ├── Skills/
+│   │   ├── Experience/
+│   │   └── Contact/
+│   │
+│   ├── App.js
+│   ├── index.js
+│   ├── App.css
+│   └── ...
+│
+├── package.json
+└── README.md
+Instalación
+Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clona el repositorio:
+bash
+Copiar código
+git clone https://github.com/tu-usuario/mi-portafolio.git
+Navega al directorio del proyecto:
+bash
+Copiar código
+cd mi-portafolio
+Instala las dependencias:
+bash
+Copiar código
+npm install
+Inicia el servidor de desarrollo:
+bash
+Copiar código
+npm start
+El proyecto estará disponible en http://localhost:3000.
 
-### `npm run build`
+Scripts Disponibles
+En el directorio del proyecto, puedes ejecutar:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm start: Inicia el servidor de desarrollo.
+npm run build: Construye la aplicación para producción en la carpeta build.
+npm run test: Inicia el corredor de pruebas.
+npm run eject: Elimina la configuración de create-react-app para una configuración personalizada.
+Contribución
+Si deseas contribuir al proyecto, sigue estos pasos:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Forkea el repositorio.
+Crea una rama para tu característica (feature):
+bash
+Copiar código
+git checkout -b mi-nueva-caracteristica
+Haz commit de tus cambios:
+bash
+Copiar código
+git commit -m 'Agrega mi nueva característica'
+Sube tu rama al repositorio:
+bash
+Copiar código
+git push origin mi-nueva-caracteristica
+Abre una solicitud de extracción (pull request).
+Contacto
+Si tienes alguna pregunta o sugerencia, no dudes en contactarme a través del formulario de contacto en mi portafolio.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+at any time. This command will remove the single build dependency from your project.
 
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
