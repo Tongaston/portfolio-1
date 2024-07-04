@@ -26,85 +26,57 @@ La estructura del proyecto es la siguiente:
 <img width="707" alt="Captura de pantalla 2024-07-04 a las 18 37 29" src="https://github.com/Tongaston/portfolio-1/assets/133245840/97974a73-2593-4acc-9fd2-55bc39a1c4ff">
 
 ### Instalación
+
 Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 
-Clona el repositorio:
-bash
-Copiar código
-git clone https://github.com/tu-usuario/mi-portafolio.git
-Navega al directorio del proyecto:
-bash
-Copiar código
-cd mi-portafolio
-Instala las dependencias:
-bash
-Copiar código
-npm install
-Inicia el servidor de desarrollo:
-bash
-Copiar código
-npm start
-El proyecto estará disponible en http://localhost:3000.
+1. **Clona el repositorio:**
 
-Scripts Disponibles
+git clone (https://github.com/Tongaston/portfolio-1.git)
+
+2. **Navega al directorio del proyecto:**
+
+cd portfolio-1
+
+3. **Instala las dependencias:**
+
+npm install
+
+4. **Inicia el servidor de desarrollo:**
+
+npm start
+
+El proyecto estará disponible en **'http://localhost:3000'**
+
+### Scripts Disponibles
+
 En el directorio del proyecto, puedes ejecutar:
 
-npm start: Inicia el servidor de desarrollo.
-npm run build: Construye la aplicación para producción en la carpeta build.
-npm run test: Inicia el corredor de pruebas.
-npm run eject: Elimina la configuración de create-react-app para una configuración personalizada.
-Contribución
+- **npm start:** Inicia el servidor de desarrollo.
+- **npm run build:** Construye la aplicación para producción en la carpeta build.
+- **npm run test:** Inicia el corredor de pruebas.
+- **npm run eject:** Elimina la configuración de create-react-app para una configuración personalizada.
+
+### Contribución
+
 Si deseas contribuir al proyecto, sigue estos pasos:
 
-Forkea el repositorio.
-Crea una rama para tu característica (feature):
-bash
-Copiar código
-git checkout -b mi-nueva-caracteristica
-Haz commit de tus cambios:
-bash
-Copiar código
-git commit -m 'Agrega mi nueva característica'
-Sube tu rama al repositorio:
-bash
-Copiar código
-git push origin mi-nueva-caracteristica
-Abre una solicitud de extracción (pull request).
-Contacto
-Si tienes alguna pregunta o sugerencia, no dudes en contactarme a través del formulario de contacto en mi portafolio.
+1. **Forkea el repositorio.**
 
-at any time. This command will remove the single build dependency from your project.
+2. **Crea una rama para tu característica (feature):**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<img width="680" alt="Captura de pantalla 2024-07-04 a las 18 55 10" src="https://github.com/Tongaston/portfolio-1/assets/133245840/a3f708c8-941d-43c9-99d5-c33fac10e598">
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. **Haz commit de tus cambios:**
 
-## Learn More
+<img width="665" alt="Captura de pantalla 2024-07-04 a las 18 55 22" src="https://github.com/Tongaston/portfolio-1/assets/133245840/8b6b54d9-d3c9-470c-8add-6b28b8177ace">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **Sube tu rama al repositorio:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img width="674" alt="Captura de pantalla 2024-07-04 a las 18 55 33" src="https://github.com/Tongaston/portfolio-1/assets/133245840/1d923b23-b65e-4a8f-a262-37131130ae14">
 
-### Code Splitting
+5. **Abre una solicitud de extracción (pull request).**
+   
+### Contacto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Si tienes alguna pregunta o sugerencia, no dudes en contactarme a través del **formulario de contacto** en mi portafolio. (https://gaston-moure-developer.vercel.app/)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
