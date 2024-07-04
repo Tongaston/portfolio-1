@@ -41,8 +41,8 @@
   border-radius: 8px;
   border: none;
   font-size: 14px;
-  background-color: rgb(50, 50, 50);
-  color: antiquewhite;
+  background-color: var(--about-bars-color);
+  color: var(--color-text);
   outline: none;
 }
 
