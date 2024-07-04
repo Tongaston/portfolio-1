@@ -31,7 +31,7 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 
 1. **Clona el repositorio:**
 
-git clone (https://github.com/Tongaston/portfolio-1.git)
+git clone https://github.com/Tongaston/portfolio-1.git
 
 2. **Navega al directorio del proyecto:**
 
@@ -45,7 +45,7 @@ npm install
 
 npm start
 
-El proyecto estará disponible en **'http://localhost:3000'**
+El proyecto estará disponible en **http://localhost:3000**
 
 ### Scripts Disponibles
 
@@ -78,5 +78,5 @@ Si deseas contribuir al proyecto, sigue estos pasos:
    
 ### Contacto
 
-Si tienes alguna pregunta o sugerencia, no dudes en contactarme a través del **formulario de contacto** en mi portafolio. (https://gaston-moure-developer.vercel.app/)
+Si tienes alguna pregunta o sugerencia, no dudes en contactarme a través del **formulario de contacto** en mi portafolio. https://gaston-moure-developer.vercel.app/
 
