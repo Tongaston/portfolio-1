@@ -1,98 +1,103 @@
-import React from 'react';
-import './portfolio.css';
+import React, { useState } from 'react'
+import './portfolio.css'
+import ProjectCard from './ProjectCard'
 
-import imgFastWeather from '../../assets/fast-weather-app.png';
-import imgSnakeGame from '../../assets/snake-game.png';
-import imgAseoClean from '../../assets/aseoclean-page.png';
-import imgAhorcadoPixel from '../../assets/ahorcado-game.png';
-import imgMovieFinder from '../../assets/movie-finder-app.png';
-import imgToDoList from '../../assets/to-do-list.png';
+import imgFastWeather from '../../assets/fast-weather-app.png'
+import imgAlmarYoga from '../../assets/almar-yoga.png'
+import imgSnakeGame from '../../assets/snake-game.png'
+import imgAseoClean from '../../assets/aseoclean-page.png'
+import imgAddToCart from '../../assets/PWA-Add to Cart.png'
 
 const Portfolio = () => {
+  const allProjects = [
+    {
+      title: 'Fast Weather App',
+      description:
+        'A quick and easy climate application created with JavaScript and deployed in Vercel.',
+      imageName: imgFastWeather,
+      demoLink: 'https://fast-weather-app.vercel.app/',
+      codeLink: 'https://github.com/Tongaston/Practicas-APIs/tree/main/Weather',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
+    },
+    {
+      title: 'Almar Yoga Website',
+      description:
+        'A yoga studio website with blog, created with JavaScript and deployed in Vercel.',
+      imageName: imgAlmarYoga,
+      demoLink: 'https://almar-yoga.vercel.app/',
+      codeLink: 'https://github.com/Tongaston/Almar-Yoga',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'NodeJS', 'Vercel'],
+    },
+    {
+      title: 'AseoClean Website',
+      description:
+        'A cleaning services website created with HTML, CSS, and JavaScript.',
+      imageName: imgAseoClean,
+      demoLink: 'https://aseoclean.es/',
+      codeLink: 'https://github.com/Tongaston/AseoClean.es',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+    },
+    {
+      title: 'PWA Add to Cart',
+      description:
+        'A Progressive Web App that allows users to add products to a cart and checkout.',
+      imageName: imgAddToCart,
+      demoLink: 'https://mamma-shop-list.netlify.app/',
+      codeLink:
+        'https://github.com/Tongaston/Scrimba-JavaScript-Practice/tree/main/Add%20to%20Cart',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'Firebase', 'Netlify'],
+    },
+    {
+      title: 'Snake Game',
+      description: 'A classic Snake game created with JavaScript.',
+      imageName: imgSnakeGame,
+      demoLink: 'https://snake-game-neon-three.vercel.app/',
+      codeLink:
+        'https://github.com/Tongaston/Practicas-JavaScript/tree/main/Snake',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+    },
+  ]
+
+  const [showAll, setShowAll] = useState(false) // Estado para alternar entre mostrar más o menos
+
+  const toggleProjects = () => {
+    setShowAll((prevShowAll) => !prevShowAll) // Alterna el estado
+  }
+
+  const visibleProjects = showAll ? allProjects : allProjects.slice(0, 4) // Condicional para mostrar todos o solo 2 proyectos
+
   return (
-    <section id='portfolio'>
-      <h2 className='portfolioTitle'>My Portfolio</h2>
-      <p className='portfolioDesc'>
+    <section id="portfolio">
+      <h2 className="portfolioTitle">My Portfolio</h2>
+      <p className="portfolioDesc">
         My portfolio as a web developer reflects my skills in creating engaging
         and functional digital experiences.
       </p>
-      <p className='portfolioDesc'>
+      <p className="portfolioDesc">
         With a user-centric approach, I designed and developed intuitive and
         aesthetically appealing websites that not only meet the technical
         requirements but also offer smooth navigation and a pleasant interface.
       </p>
-      <div className='imgContainer'>
-        <a
-          href='https://fast-weather-app.vercel.app/'
-          target='_blank'
-          rel='noreferrer'
-        >
-          <img
-            src={imgFastWeather}
-            alt='fast weather app capture'
-            className='workImg'
-          />
-        </a>
-
-        <a
-          href='https://snake-game-neon-three.vercel.app/'
-          target='_blank'
-          rel='noreferrer'
-        >
-          <img
-            src={imgSnakeGame}
-            alt='snake game capture'
-            className='workImg'
-          />
-        </a>
-
-        <a href='https://www.aseoclean.es/' target='_blank' rel='noreferrer'>
-          <img
-            src={imgAseoClean}
-            alt='aseoclean.es capture'
-            className='workImg'
-          />
-        </a>
-
-        <a
-          href='https://ahorcado-pixel.vercel.app/'
-          target='_blank'
-          rel='noreferrer'
-        >
-          <img
-            src={imgAhorcadoPixel}
-            alt='ahocado pixel capture'
-            className='workImg'
-          />
-        </a>
-
-        <a
-          href='https://movie-finder-brown.vercel.app/'
-          target='_blank'
-          rel='noreferrer'
-        >
-          <img
-            src={imgMovieFinder}
-            alt='movie finder app capture'
-            className='workImg'
-          />
-        </a>
-
-        <a
-          href='https://practicas-java-script.vercel.app/'
-          target='_blank'
-          rel='noreferrer'
-        >
-          <img
-            src={imgToDoList}
-            alt='to do list app capture'
-            className='workImg cards' 
-          />
-        </a>
+      <div className="imgContainer">
+        <div className="imgWrapper">
+          {visibleProjects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              title={project.title}
+              description={project.description}
+              imageName={project.imageName}
+              demoLink={project.demoLink}
+              codeLink={project.codeLink}
+              technologies={project.technologies}
+            />
+          ))}
+        </div>
       </div>
-      <button className='portfolioBtn'>See More</button>
+      <button onClick={toggleProjects} className="portfolioBtn">
+        {showAll ? 'Show Less' : 'See More'}
+      </button>
     </section>
-  );
-};
+  )
+}
 
-export default Portfolio;
+export default Portfolio
