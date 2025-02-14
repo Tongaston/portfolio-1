@@ -12,13 +12,14 @@
 
 .contactTitle {
   font-size: 4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
 .contactPara {
   font-size: 1.1rem;
   text-wrap: balance;
-  margin: 0.5rem auto 2rem auto;
+  margin: 0.5rem auto 1rem auto;
   max-width: 50rem;
   padding: 0 2rem;
   opacity: 0.7;
@@ -63,7 +64,8 @@
 }
 
 .contactFooter {
-  margin-top: 4rem;
+  margin: 2rem 0 2rem 0;
+
 }
 
 .listaFooter {
@@ -82,3 +84,34 @@
     opacity: 1;
   }
 }
+
+
+@media screen and (max-width: 500px) {
+  .contactTitle {
+    font-size: 2.5rem;
+  }
+
+  .contactPara {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .contactInput,
+  .textArea {
+    padding: 0.5rem;
+    font-size: 12px;
+  }
+
+  .contactBtn {
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+  }
+
+  .contactFooter {
+    margin-top: 1rem;
+  }
+
+  .listaFooter {
+    gap: 1rem;
+  }
+} 
