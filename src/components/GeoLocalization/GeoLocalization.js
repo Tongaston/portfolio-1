@@ -19,11 +19,11 @@ const calculateDistance = (lat1, lng1, lat2, lng2) => {
   return R * c
 }
 
-const TU_API_KEY = 'AIzaSyAXN2oZZCYlmG_5OW-K2jF-MGLZf2Wcgsk'
+// const TU_API_KEY = 'AIzaSyAXN2oZZCYlmG_5OW-K2jF-MGLZf2Wcgsk'
 
 const GeoLocalization = () => {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: TU_API_KEY, // API Key
+    googleMapsApiKey: process.env.REACT_APP_API_KEY, // API Key
   })
 
   const [userLocation, setUserLocation] = useState(null)
