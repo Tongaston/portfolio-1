@@ -30,13 +30,18 @@ const GeoLocalization = () => {
   const [distance, setDistance] = useState(null)
   const [message, setMessage] = useState('')
 
+  const getRandomOffset = (range) => (Math.random() - 0.5) * range
+
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
+          // Definir un rango de variación en grados (~0.01 ≈ 1.1 km)
+          const offsetRange = 0.01
+          // Calcular la nueva posición con un offset aleatorio
           const userLatLng = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
+            lat: position.coords.latitude + getRandomOffset(offsetRange),
+            lng: position.coords.longitude + getRandomOffset(offsetRange),
           }
           setUserLocation(userLatLng)
 
