@@ -19,7 +19,7 @@ const calculateDistance = (lat1, lng1, lat2, lng2) => {
   return R * c
 }
 
-// const TU_API_KEY = 'AIzaSyAXN2oZZCYlmG_5OW-K2jF-MGLZf2Wcgsk'
+const getRandomOffset = (range) => (Math.random() - 0.5) * range
 
 const GeoLocalization = () => {
   const { isLoaded } = useLoadScript({
@@ -30,19 +30,17 @@ const GeoLocalization = () => {
   const [distance, setDistance] = useState(null)
   const [message, setMessage] = useState('')
 
-  const getRandomOffset = (range) => (Math.random() - 0.5) * range
-
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          // Definir un rango de variación en grados (~0.01 ≈ 1.1 km)
-          const offsetRange = 0.01
-          // Calcular la nueva posición con un offset aleatorio
+          const offsetRange = 0.01 // Aproximadamente 1.1 km de variación
+
           const userLatLng = {
             lat: position.coords.latitude + getRandomOffset(offsetRange),
             lng: position.coords.longitude + getRandomOffset(offsetRange),
           }
+
           setUserLocation(userLatLng)
 
           const dist = calculateDistance(
