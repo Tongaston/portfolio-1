@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './navbar.css'
 import DarkMode from '../DarkMode/DarkMode'
+import LanguageSwitcher from '../Language/LanguageSwitcher'
 
 import { Link } from 'react-scroll'
 
@@ -67,6 +68,8 @@ const Navbar = () => {
           Technologies
         </Link>
       </div>
+
+      <LanguageSwitcher />
 
       <DarkMode />
 
