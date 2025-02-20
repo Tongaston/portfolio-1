@@ -4,6 +4,7 @@ import About from './components/About/about'
 import Portfolio from './components/Portfolio/portfolio'
 import Technologies from './components/Technologies/technologies'
 import Contact from './components/Contact/contact'
+import './i18n'
 
 function App() {
   return (
