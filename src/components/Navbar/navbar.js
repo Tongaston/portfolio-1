@@ -8,8 +8,11 @@ import { Link } from 'react-scroll'
 import logoNavbar from '../../assets/imagen-favicon.png'
 import iconMsj from '../../assets/icono-contact.svg'
 
+import { useTranslation } from 'react-i18next'
+
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false)
+  const { t } = useTranslation()
 
   return (
     <nav className="navbar">
@@ -31,7 +34,7 @@ const Navbar = () => {
           duration={500}
           className="desktopMenuListItem"
         >
-          Home
+          {t('Home')}
         </Link>
         <Link
           activeClass="active"
@@ -42,7 +45,7 @@ const Navbar = () => {
           duration={500}
           className="desktopMenuListItem"
         >
-          About
+          {t('About')}
         </Link>
         <Link
           activeClass="active"
@@ -53,7 +56,7 @@ const Navbar = () => {
           duration={500}
           className="desktopMenuListItem"
         >
-          Portfolio
+          {t('Portfolio')}
         </Link>
 
         <Link
@@ -65,7 +68,7 @@ const Navbar = () => {
           duration={500}
           className="desktopMenuListItem"
         >
-          Technologies
+          {t('Technologies')}
         </Link>
       </div>
 
@@ -82,7 +85,7 @@ const Navbar = () => {
         }}
       >
         <img src={iconMsj} alt="contact me icon" className="desktopMenuIcon" />
-        Contact Me
+        {t('Contact Me')}
       </button>
 
       <svg

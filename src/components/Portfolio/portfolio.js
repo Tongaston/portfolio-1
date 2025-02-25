@@ -8,7 +8,11 @@ import imgSnakeGame from '../../assets/snake-game.png'
 import imgAseoClean from '../../assets/aseoclean-page.png'
 import imgAddToCart from '../../assets/PWA-Add to Cart.png'
 
+import { useTranslation } from 'react-i18next'
+
 const Portfolio = () => {
+  const { t } = useTranslation()
+
   const allProjects = [
     {
       title: 'Fast Weather App',
@@ -68,15 +72,17 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio">
-      <h2 className="portfolioTitle">My Portfolio</h2>
+      <h2 className="portfolioTitle">{t('My Portfolio')}</h2>
       <p className="portfolioDesc">
-        My portfolio as a web developer reflects my skills in creating engaging
-        and functional digital experiences.
+        {t(
+          'My portfolio as a web developer reflects my skills in creating engaging and functional digital experiences.'
+        )}
+        '
       </p>
       <p className="portfolioDesc">
-        With a user-centric approach, I designed and developed intuitive and
-        aesthetically appealing websites that not only meet the technical
-        requirements but also offer smooth navigation and a pleasant interface.
+        {t(
+          'With a user-centric approach, I designed and developed intuitive and aesthetically appealing websites that not only meet the technical requirements but also offer smooth navigation and a pleasant interface.'
+        )}
       </p>
       <div className="imgContainer">
         <div className="imgWrapper">
@@ -94,7 +100,7 @@ const Portfolio = () => {
         </div>
       </div>
       <button onClick={toggleProjects} className="portfolioBtn">
-        {showAll ? 'Show Less' : 'See More'}
+        {showAll ? t('Show Less') : t('Show More')}
       </button>
     </section>
   )

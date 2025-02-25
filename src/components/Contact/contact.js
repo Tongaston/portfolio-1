@@ -3,8 +3,11 @@ import './contact.css'
 import emailjs from '@emailjs/browser'
 import GeoLocalization from '../GeoLocalization/GeoLocalization'
 
+import { useTranslation } from 'react-i18next'
+
 function Contact() {
   const form = useRef()
+  const { t } = useTranslation()
 
   const sendEmail = (e) => {
     e.preventDefault()
@@ -27,31 +30,31 @@ function Contact() {
 
   return (
     <section id="contactSection">
-      <h2 className="contactTitle">Contact Me</h2>
+      <h2 className="contactTitle">{t('Contact Me')}</h2>
       <GeoLocalization />
       <p className="contactPara">
-        Please fill out the form below to discuss any work opportunies.
+        {t('Please fill out the form below to discuss any work opportunies.')}
       </p>
       <form ref={form} onSubmit={sendEmail} className="contactForm">
         <input
           name="user_name"
           type="text"
           className="contactInput"
-          placeholder="Your name"
+          placeholder={t('Your name')}
         ></input>
         <input
           name="user_email"
           type="email"
           className="contactInput"
-          placeholder="Your Email"
+          placeholder={t('Your Email')}
         ></input>
         <textarea
           className="textArea"
           name="message"
           rows="7"
-          placeholder="Your message"
+          placeholder={t('Your message')}
         ></textarea>
-        <button className="contactBtn">Submit</button>
+        <button className="contactBtn">{t('Submit')}</button>
       </form>
       <footer className="contactFooter">
         <ul className="listaFooter">

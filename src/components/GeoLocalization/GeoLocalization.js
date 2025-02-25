@@ -2,6 +2,8 @@ import './geoLocalization.css'
 import React, { useState, useEffect } from 'react'
 import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api'
 
+import { useTranslation } from 'react-i18next'
+
 // Coordenadas objetivo (Castelldefels, Barcelona)
 const targetLocation = { lat: 41.2833, lng: 1.9667 }
 
@@ -22,6 +24,7 @@ const calculateDistance = (lat1, lng1, lat2, lng2) => {
 const getRandomOffset = (range) => (Math.random() - 0.5) * range
 
 const GeoLocalization = () => {
+  const { t } = useTranslation()
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_API_KEY, // API Key
   })
@@ -53,22 +56,24 @@ const GeoLocalization = () => {
           setDistance(dist)
           setMessage(
             dist <= 10
-              ? `¡YES, We are close! We are ${dist.toFixed(2)}km away.`
-              : `We are far. We are ${dist.toFixed(2)}km away.`
+              ? t('close_message', { distance: dist.toFixed(2) })
+              : t('far_message', { distance: dist.toFixed(2) })
           )
         },
-        () => alert('Your location could not be obtained.')
+        () => alert(t('not_location'))
       )
     } else {
-      alert('Geolocation is not supported in your browser.')
+      alert(t('not_supported'))
     }
-  }, [])
+  }, [t])
 
-  if (!isLoaded) return <div>Loading Map...</div>
+  if (!isLoaded) return <div>{t('Loading Map')}...</div>
 
   return (
     <div className="geo-container">
-      <p className="map-message">¿Are we close? {message}</p>
+      <p className="map-message">
+        {t('are_we_close')} {message}
+      </p>
       <div className="map-container">
         <GoogleMap
           zoom={12}
