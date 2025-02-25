@@ -1,21 +1,27 @@
 import React from 'react'
 import './intro.css'
 import { Link } from 'react-scroll'
+import Saludo from './Saludo'
 
 import fotoGaston from '../../assets/image-1.png'
 import iconHire from '../../assets/briefcase.svg'
 
+import { useTranslation } from 'react-i18next'
+
 const Intro = () => {
+  const { t } = useTranslation()
+
   return (
     <section id="intro">
       <div className="introContent">
-        <h3 className="hello">Hello,</h3>
+        {/* <h3 className="hello">{t('Hello')},</h3> */} <Saludo />
         <h1 className="introText">
-          I'm <span className="introName">Gastón</span> <br /> Web Developer
+          {t("I'm")} <span className="introName">Gastón</span> <br />{' '}
+          {t('Web Developer')}
         </h1>
         <p className="introPara">
-          I specialize in developing responsive and <br />
-          search engine friendly websites.
+          {t('I specialize in developing responsive and')} <br />
+          {t('search engine friendly websites')}.
         </p>
         <Link>
           <button
@@ -27,7 +33,7 @@ const Intro = () => {
             }}
           >
             <img className="introBtnIcon" src={iconHire} alt="briefcase icon" />
-            Hire Me
+            {t('Hire Me')}
           </button>
         </Link>
       </div>
